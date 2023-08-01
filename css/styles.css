@@ -1,0 +1,112 @@
+body {
+    margin: 0;
+    padding: 0;
+    background-color: rgba(255, 249, 242, 0.25);
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+}
+
+.container {
+    width: 100%;
+    height: 100vh;
+    margin: 0 auto;
+}
+
+.container__content {
+    width: 100%;
+    max-width: 1200px;
+    height: inherit;
+    background-color: rgb(214, 244, 252);
+    margin: 0 auto;
+    position: relative;
+}
+
+.container__content-shadow {
+    box-shadow: 6px 0 4px -4px #999, -6px 0 4px -4px #999;
+    -moz-box-shadow: 6px 0 4px -4px #999, -6px 0 4px -4px #999;
+    -webkit-box-shadow: 6px 0 4px -4px #999, -6px 0 4px -4px #999;
+}
+
+.container__content-left {
+    position: absolute;
+    background-color: rgb(241, 244, 245);
+    width: 50%;
+    height: inherit;
+    top: 0;
+    left: 0;
+    transition: .3s;
+}
+
+.container__content-right {
+    position: absolute;
+    background-color: rgb(241, 244, 245);
+    width: 50%;
+    height: inherit;
+    top: 0;
+    right: 0;
+    transition: .3s;
+}
+
+.container__content-center {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    width: 50px;
+    height: 50px;
+    border-radius: 100%;
+    border: 3px solid gray;
+    background-color: rgb(0, 128, 0);
+    transition: .8s cubic-bezier(0.075, 0.82, 0.165, 1);
+
+    /* Animation */
+    animation-name: change-color;
+    animation-duration: 6s;
+    animation-delay: .1s;
+    animation-iteration-count: infinite;
+}
+
+@keyframes change-color {
+    0% {background-color: rgba(0, 128, 0, .1);}
+    15% {background-color: rgba(0, 128, 0, .3);}
+    30% {background-color: rgba(0, 128, 0, .5);}
+    45% {background-color: rgba(0, 128, 0, .7);}
+    60% {background-color: rgba(0, 128, 0, 1);}
+    80% {background-color: rgba(0, 128, 0, .7);}
+    100% {background-color: rgba(0, 128, 0, .5);}
+}
+
+.container__content-center:hover {
+    cursor: pointer;
+}
+
+.fa-power-off {
+    position: fixed;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    font-size: 2rem;
+}
+
+.fa-power-off-hidden {
+    display: none;
+}
+
+.container__content-left-right-move {
+    width: 0%;
+}
+
+.container__content-greeting {
+    text-align: center;
+    padding: 0;
+    margin: 0;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    transition: .8s cubic-bezier(0.075, 0.82, 0.165, 1);
+    opacity: 0;
+}
+
+.container__content-greeting-show {
+    opacity: 1;
+}
