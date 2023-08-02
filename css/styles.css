@@ -31,18 +31,20 @@ body {
     position: absolute;
     background-color: rgb(241, 244, 245);
     width: 50%;
+    height: inherit;
     top: 0;
     left: 0;
-    transition: .4s;
+    transition: all .4s;
 }
 
 .container__content-right {
     position: absolute;
     background-color: rgb(241, 244, 245);
     width: 50%;
+    height: inherit;
     top: 0;
     right: 0;
-    transition: .4s;
+    transition: all .4s;
 }
 
 .container__content-center {
